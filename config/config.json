@@ -1,0 +1,27 @@
+{
+  "data": {
+    "file_path": "datasets/Database_PIL_ITALIA.csv",
+    "seq_length": 10
+  },
+  "model": {
+    "input_size_pil": 10,
+    "input_size_prod": 10,
+    "input_size_rlg": 10,
+    "input_size_rm": 10,
+    "hidden_size": 64,
+    "num_layers": 1,
+    "output_size": 1
+  },
+  "training": {
+    "batch_size": 1,
+    "learning_rate": 0.001,
+    "num_epochs": 100,
+    "early_stopping_patience": 5  
+  },
+  "prediction": {
+    "num_predictions": 10
+  },
+  "validation": {
+    "num_validation_epochs": 5  
+  }
+}

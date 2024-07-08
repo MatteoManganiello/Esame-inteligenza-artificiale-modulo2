@@ -1,0 +1,44 @@
+
+{
+    "type": "object",
+    "properties": {
+        "data": {
+            "type": "object",
+            "properties": {
+                "file_path": { "type": "string" },
+                "seq_length": { "type": "integer" }
+            },
+            "required": ["file_path", "seq_length"]
+        },
+        "model": {
+            "type": "object",
+            "properties": {
+                "input_size_pil": { "type": "integer" },
+                "input_size_prod": { "type": "integer" },
+                "input_size_rlg": { "type": "integer" },
+                "input_size_rm": { "type": "integer" },
+                "hidden_size": { "type": "integer" },
+                "num_layers": { "type": "integer" },
+                "output_size": { "type": "integer" }
+            },
+            "required": ["input_size_pil", "input_size_prod", "input_size_rlg", "input_size_rm", "hidden_size", "num_layers", "output_size"]
+        },
+        "training": {
+            "type": "object",
+            "properties": {
+                "num_epochs": { "type": "integer" },
+                "batch_size": { "type": "integer" },
+                "learning_rate": { "type": "number" }
+            },
+            "required": ["num_epochs", "batch_size", "learning_rate"]
+        },
+        "prediction": {
+            "type": "object",
+            "properties": {
+                "num_predictions": { "type": "integer" }
+            },
+            "required": ["num_predictions"]
+        }
+    },
+    "required": ["data", "model", "training", "prediction"]
+}
